@@ -38,11 +38,45 @@
 }
 
 @layer layout {
+     body {
+        margin: 0;
+        background-color: var(--cream);
+
+    }
+
+    header {
+        background-color: var(--orange-accent);
+
+    }
+
+     main {
+        align-content: center;
+
+    }
+
+    nav {
+        display: flex;
+        padding: var(--more-space);
+        
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: var(--less-space);
+        margin: var(--more-space);
+        justify-content: center;
+
+    }
+    
     h1 {
         color: var(--black);
         font-style: var(--heading-one);
         font-weight: var(--h1-weight);
         font-style: var(--font-style);
+
+        text-align: center;
     }
 
     h2 {
@@ -50,6 +84,23 @@
         font-style: var(--subhead-and-body);
         font-weight: var(--h2-weight);
         font-style: var(--font-style);
+    }
+
+    h3 {
+
+    }
+
+    p {
+        margin-left: var(--more-space);
+    }
+
+    a {
+
+    }
+
+    footer {
+        background-color: var(--orange-accent);
+
     }
 
 }
