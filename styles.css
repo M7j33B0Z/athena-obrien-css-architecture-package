@@ -1,12 +1,23 @@
-@layer reset, base, layout, components, utilities, states, overrides, print;
+/* CSS by Athena O'Brien */
 
-@layer reset {
-   
+/* Imported Fonts */
+@import url("https://use.typekit.net/kxq0kzg.css");
 
-}
 
-@layer base {
-    :root {
+/* CSS Reset */
+ *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+/*ROOT*/
+
+:root {
         --cream: #ede6d3;
         --black: #000000;
         --orange-accent: #FFA30D;
@@ -35,10 +46,12 @@
 
     }
 
-}
+/* Global Styles - Mobile First */
 
-@layer layout {
-     body {
+@layer base, layout, components, utilities, states, overrides, print;
+
+@layer base {
+    body {
         margin: 0;
         background-color: var(--cream);
 
@@ -49,9 +62,9 @@
 
     }
 
-     main {
+    main {
+        min-width: 450px;
         align-content: center;
-
     }
 
     nav {
@@ -75,7 +88,6 @@
         font-style: var(--heading-one);
         font-weight: var(--h1-weight);
         font-style: var(--font-style);
-
         text-align: center;
     }
 
@@ -87,14 +99,17 @@
     }
 
     h3 {
+        
 
     }
 
     p {
+        font-style: var(--subhead-and-body);
         margin-left: var(--more-space);
     }
 
     a {
+        font-style: var(--subhead-and-body);
 
     }
 
@@ -105,7 +120,27 @@
 
 }
 
+@layer layout {
+     
+
+
+}
+
 @layer components {
+    .hero {
+        background-color: var(--green-accent);
+        border-radius: var(--radius);
+        padding: var(--more-space);
+        margin: var(--more-space);
+        color: var(--cream);
+     }
+
+     .card {
+        background-color: var(--green-accent);
+        border-radius: var(--radius);
+        padding: var(--more-space);
+        margin: var(--more-space);
+     }
 
 }
 
@@ -121,7 +156,27 @@
 
 }
 
+/*media queries medium*/
+
+@media screen and (max-width: 750px) {
+
+}
+
+/*media queries large*/
+
+@media screen and (max-width: 1080px) {
+
+}
+
+
+/*media queries print*/
+
 @media print {
+    body {
+        background-color: #ffffff;
+    }
+
+
 
 }
 
