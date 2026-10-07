@@ -2,8 +2,7 @@
 
 /* Imported Fonts */
 @import url("https://use.typekit.net/kxq0kzg.css");
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Gravitas+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* CSS Reset */
  *,
   *::before,
@@ -38,8 +37,6 @@
    
         --h2-weight: 700;
         
-        --h3-weight: 400;
-        
         --body-weight: 300;
             
         --font-style: normal;
@@ -52,7 +49,7 @@
 
 @layer base {
     body {
-        margin: 0;
+        margin: 0 auto;
         background-color: var(--cream);
 
     }
@@ -82,10 +79,14 @@
         justify-content: center;
 
     }
+
+    nav a {
+        font-family: var(--subhead-and-body);
+    }
     
     h1 {
         color: var(--black);
-        font-style: var(--heading-one);
+        font-family: var(--heading-one);
         font-weight: var(--h1-weight);
         font-style: var(--font-style);
         text-align: center;
@@ -93,35 +94,53 @@
 
     h2 {
         color: var(--black);
-        font-style: var(--subhead-and-body);
+        font-family: var(--subhead-and-body);
         font-weight: var(--h2-weight);
         font-style: var(--font-style);
     }
 
-    h3 {
-        
-
-    }
-
-    p {
-        font-style: var(--subhead-and-body);
+     p {
+        font-family: var(--subhead-and-body);
+        font-weight: var(--body-weight);
         margin-left: var(--more-space);
     }
 
     a {
-        font-style: var(--subhead-and-body);
+        font-family: var(--subhead-and-body);
+        font-weight: var(--body-weight);
+        color: var(--cream);
 
+        background-color: var(--green-accent);
+        border-radius: var(--radius);
+
+        padding: var(--less-space);
+    }
+
+    figcaption {
+        font-family: var(--subhead-and-body);
+        font-weight: var(--body-weight);
     }
 
     footer {
         background-color: var(--orange-accent);
+        text-align: center;
+        padding: var(--less-space);
+    }
 
+    small {
+        font-family: var(--subhead-and-body);
+        font-size: small;
     }
 
 }
 
 @layer layout {
-     
+     .work-grid, .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--more-space);
+     }
+
 
 
 }
@@ -133,22 +152,80 @@
         padding: var(--more-space);
         margin: var(--more-space);
         color: var(--cream);
+        display: flex;
+        justify-content: center;
+     }
+
+     .hero img {
+        padding: var(--more-space);
+
+     }
+     
+
+
+    figure, figcaption {
+        background-color: var(--orange-accent);
+        border-radius: var(--radius);
+        outline: 2px solid var(--black);
+
      }
 
      .card {
         background-color: var(--green-accent);
         border-radius: var(--radius);
         padding: var(--more-space);
+        margin: var(--less-space);
+     }
+
+     .contact-mode {
+        background-color: var(--green-accent);
+        border-radius: var(--radius);
+        padding: var(--more-space);
         margin: var(--more-space);
      }
 
+     .button a {
+        background-color: var(--orange-accent);
+        padding: var(--more-space);
+        border-radius: var(--radius);
+        color: var(--black);
+
+     }
 }
 
 @layer utilities {
+    a {
+        text-decoration: none;
+    }
+
+    small {
+        font-style: italic;
+    }
+
+    figcaption {
+        text-align: center;
+
+    }   
 
 }
 
 @layer states {
+     a:hover{
+        background-color: var(--cream);
+        color: var(--black);
+
+    }
+
+    nav > a[aria-current="page"]{
+        background-color: var(--cream);
+        outline: 2px solid var(--black);        
+        
+    }
+
+    nav > a:focus-visible{
+        background-color: blueviolet;
+    }
+
 
 }
 
