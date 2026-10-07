@@ -161,8 +161,6 @@
 
      }
      
-
-
     figure, figcaption {
         background-color: var(--orange-accent);
         border-radius: var(--radius);
@@ -191,6 +189,10 @@
         color: var(--black);
 
      }
+
+     a:focus {
+        outline: var(--on-focus);
+     }
 }
 
 @layer utilities {
@@ -216,14 +218,17 @@
 
     }
 
-    nav > a[aria-current="page"]{
-        background-color: var(--cream);
-        outline: 2px solid var(--black);        
+    figure img:hover {
+        transform: scale(1.5);
+    }
+
+    header a[aria-current="page"]{
+        outline: var(--on-focus);   
         
     }
 
-    nav > a:focus-visible{
-        background-color: blueviolet;
+   nav a:focus-visible{
+        
     }
 
 
