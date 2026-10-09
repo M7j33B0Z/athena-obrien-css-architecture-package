@@ -184,6 +184,12 @@
     
      }
 
+     .skills li {
+        list-style-type: square;
+        font-family: var(--subhead-and-body);
+        font-weight: var(--body-weight);
+     }
+
 
      .card {
         background-color: var(--green-accent);
@@ -231,7 +237,12 @@
 
     }
 
-    
+    .skills{
+        text-align: center;
+        list-style-position: inside;
+    }
+
+
 
 }
 
@@ -246,8 +257,8 @@
         transform: scale(1.5);
     }
 
-    nav a[aria-current="page"] {
-        outline: var(--on-focus);   
+    nav ul li a[aria-current="page"] {
+       background-color: red;   
         
     }
 
