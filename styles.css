@@ -122,6 +122,8 @@
     figcaption {
         font-family: var(--subhead-and-body);
         font-weight: var(--body-weight);
+        padding: var(--more-space);
+        text-align: center;
     }
 
     footer {
@@ -183,11 +185,6 @@
      }
 
 
-     figcaption {
-        padding: var(--more-space);
-
-     }
-
      .card {
         background-color: var(--green-accent);
         border-radius: var(--radius);
@@ -201,6 +198,7 @@
         padding: var(--more-space);
         margin: var(--more-space);
         display: flex;
+        flex-direction: var(--contact-mode-flow);
 
      }
 
@@ -218,10 +216,6 @@
 }
 
 @layer utilities {
-    figcaption {
-        text-align: center;
-
-    }   
 
     .block-text {
         margin-right: 5rem;
@@ -236,6 +230,8 @@
         border-radius: 50%;
 
     }
+
+    
 
 }
 
