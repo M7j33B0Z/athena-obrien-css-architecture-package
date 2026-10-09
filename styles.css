@@ -161,10 +161,25 @@
 
      }
      
-    figure, figcaption {
+    figure {
         background-color: var(--orange-accent);
         border-radius: var(--radius);
         outline: 2px solid var(--black);
+        display: block;
+        max-width: max-content;
+        margin: 0 auto;
+        margin-bottom: var(--less-space);
+
+     }
+
+     figure img {
+        margin: var(--more-space);
+    
+     }
+
+
+     figcaption {
+        padding: var(--more-space);
 
      }
 
@@ -222,12 +237,13 @@
         transform: scale(1.5);
     }
 
-    header a[aria-current="page"]{
+    nav a[aria-current="page"] {
         outline: var(--on-focus);   
         
     }
 
-   nav a:focus-visible{
+    header a:focus-visible {
+        outline: var(--on-focus);
         
     }
 
