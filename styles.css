@@ -28,7 +28,6 @@
         --less-space: 0.5rem;
 
         --on-focus: 2px solid var(--black);
-        --scale-size: scale(1.1);
 
         --heading-one: "Gravitas One", serif; 
         --h1-weight: 400;
@@ -40,6 +39,9 @@
         --body-weight: 300;
             
         --font-style: normal;
+
+        --contact-mode-flow: column-reverse;
+
 
     }
 
@@ -109,6 +111,7 @@
         font-family: var(--subhead-and-body);
         font-weight: var(--body-weight);
         color: var(--cream);
+        text-decoration: none;
 
         background-color: var(--green-accent);
         border-radius: var(--radius);
@@ -130,6 +133,8 @@
     small {
         font-family: var(--subhead-and-body);
         font-size: small;
+        font-style: italic;
+
     }
 
 }
@@ -195,6 +200,8 @@
         border-radius: var(--radius);
         padding: var(--more-space);
         margin: var(--more-space);
+        display: flex;
+
      }
 
      .button a {
@@ -211,18 +218,24 @@
 }
 
 @layer utilities {
-    a {
-        text-decoration: none;
-    }
-
-    small {
-        font-style: italic;
-    }
-
     figcaption {
         text-align: center;
 
     }   
+
+    .block-text {
+        margin-right: 5rem;
+        margin-left: 5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        line-height: 200%;
+
+    }
+
+    .contact-img {
+        border-radius: 50%;
+
+    }
 
 }
 
@@ -272,6 +285,17 @@
 @media print {
     body {
         background-color: #ffffff;
+        color: var(--black);
+    }
+
+    header, footer {
+        visibility: hidden;
+
+    }
+
+    .contact-mode {
+        outline: 2px solid lightslategray;
+
     }
 
 
