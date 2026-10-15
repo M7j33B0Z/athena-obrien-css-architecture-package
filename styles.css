@@ -297,6 +297,7 @@
 
     header, footer {
         visibility: hidden;
+        display: none;
 
     }
 
