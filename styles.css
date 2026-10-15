@@ -242,6 +242,8 @@
 
     }
 
+    /*Add two more utilities*/
+
 
 
 }
@@ -250,6 +252,11 @@
      a:hover{
         background-color: var(--background-color);
         color: var(--text-color);
+
+    }
+
+    a:active {
+        color: purple;
 
     }
 
@@ -302,7 +309,7 @@
     }
 
     .contact-mode, .card {
-        background-color: lightslategray !important;
+       /*cards should have white backgrounds and not split up across pages*/
 
     }
 
