@@ -17,17 +17,17 @@
 /*ROOT*/
 
 :root {
-        --cream: #ede6d3;
-        --black: #000000;
-        --orange-accent: #FFA30D;
-        --green-accent:#3AB055;
+        --background-color: #ede6d3;
+        --text-color: #000000;
+        --header-footer-buttons: #FFA30D;
+        --hero-card-nav:#3AB055;
 
         --radius: 25px;
 
         --more-space: 1rem;
         --less-space: 0.5rem;
 
-        --on-focus: 2px solid var(--black);
+        --on-focus: 2px solid var(--text-color);
 
         --heading-one: "Gravitas One", serif; 
         --h1-weight: 400;
@@ -40,8 +40,6 @@
             
         --font-style: normal;
 
-        --contact-mode-flow: column-reverse;
-
 
     }
 
@@ -52,12 +50,12 @@
 @layer base {
     body {
         margin: 0 auto;
-        background-color: var(--cream);
+        background-color: var(--background-color);
 
     }
 
     header {
-        background-color: var(--orange-accent);
+        background-color: var(--header-footer-buttons);
 
     }
 
@@ -87,7 +85,7 @@
     }
     
     h1 {
-        color: var(--black);
+        color: var(--text-color);
         font-family: var(--heading-one);
         font-weight: var(--h1-weight);
         font-style: var(--font-style);
@@ -95,7 +93,7 @@
     }
 
     h2 {
-        color: var(--black);
+        color: var(--text-color);
         font-family: var(--subhead-and-body);
         font-weight: var(--h2-weight);
         font-style: var(--font-style);
@@ -110,10 +108,10 @@
     a {
         font-family: var(--subhead-and-body);
         font-weight: var(--body-weight);
-        color: var(--cream);
+        color: var(--background-color);
         text-decoration: none;
 
-        background-color: var(--green-accent);
+        background-color: var(--hero-card-nav);
         border-radius: var(--radius);
 
         padding: var(--less-space);
@@ -127,7 +125,7 @@
     }
 
     footer {
-        background-color: var(--orange-accent);
+        background-color: var(--header-footer-buttons);
         text-align: center;
         padding: var(--less-space);
     }
@@ -154,11 +152,11 @@
 
 @layer components {
     .hero {
-        background-color: var(--green-accent);
+        background-color: var(--hero-card-nav);
         border-radius: var(--radius);
         padding: var(--more-space);
         margin: var(--more-space);
-        color: var(--cream);
+        color: var(--background-color);
         display: flex;
         justify-content: center;
      }
@@ -169,9 +167,9 @@
      }
      
     figure {
-        background-color: var(--orange-accent);
+        background-color: var(--hero-card-nav);
         border-radius: var(--radius);
-        outline: 2px solid var(--black);
+        outline: 2px solid var(--text-color);
         display: block;
         max-width: max-content;
         margin: 0 auto;
@@ -184,7 +182,13 @@
     
      }
 
-     .skills li {
+
+    .skills{
+        text-align: center;
+        list-style-position: inside;
+    }
+
+    .skills li {
         list-style-type: square;
         font-family: var(--subhead-and-body);
         font-weight: var(--body-weight);
@@ -192,14 +196,16 @@
 
 
      .card {
-        background-color: var(--green-accent);
+        background-color: var(--hero-card-nav);
         border-radius: var(--radius);
         padding: var(--more-space);
         margin: var(--less-space);
      }
 
      .contact-mode {
-        background-color: var(--green-accent);
+       --contact-mode-flow: column-reverse;
+
+        background-color: var(--hero-card-nav);
         border-radius: var(--radius);
         padding: var(--more-space);
         margin: var(--more-space);
@@ -208,11 +214,16 @@
 
      }
 
+     .contact-img {
+        border-radius: 50%;
+
+    }
+
      .button a {
-        background-color: var(--orange-accent);
+        background-color: var(--header-footer-buttons);
         padding: var(--more-space);
         border-radius: var(--radius);
-        color: var(--black);
+        color: var(--text-color);
 
      }
 
@@ -232,24 +243,14 @@
 
     }
 
-    .contact-img {
-        border-radius: 50%;
-
-    }
-
-    .skills{
-        text-align: center;
-        list-style-position: inside;
-    }
-
 
 
 }
 
 @layer states {
      a:hover{
-        background-color: var(--cream);
-        color: var(--black);
+        background-color: var(--background-color);
+        color: var(--text-color);
 
     }
 
@@ -292,7 +293,7 @@
 @media print {
     body {
         background-color: #ffffff;
-        color: var(--black);
+        color: var(--text-color);
     }
 
     header, footer {
