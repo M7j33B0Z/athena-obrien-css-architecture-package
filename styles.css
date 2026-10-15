@@ -301,8 +301,8 @@
 
     }
 
-    .contact-mode {
-        outline: 2px solid lightslategray;
+    .contact-mode, .card {
+        background-color: lightslategray !important;
 
     }
 
