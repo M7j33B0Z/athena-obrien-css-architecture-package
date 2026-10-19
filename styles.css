@@ -296,8 +296,14 @@
     }
 
     .contact-mode, .card {
-       /*cards should have white backgrounds and not split up across pages*/
+       background-color: white;
+       break-inside: auto;
 
+    }
+
+    figure {
+        outline: none;
+        break-inside: auto;
     }
 
 
